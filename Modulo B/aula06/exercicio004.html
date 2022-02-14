@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font: normal 20pt Arial;
+    }
+  </style>
+</head>
+
+<body>
+  <ol>
+    <script>
+      var nome = window.prompt('Qual seu nome? ')
+      document.write(`<li>Seu nome tem ${nome.length} letras</li>`)
+      document.write(`<li>Seu nome agora em maiusculo: ${nome.toUpperCase()}<br></li>`)
+      document.write(`<li>Seu email todo em minuculo ${nome.toLowerCase()}@gmail.com</li>`)
+
+      //aqui a ideia era mostrar a conversao para modeda local, mas no html exibido ele nao mostra o simbolo moeda
+      var salario = window.prompt('Qual seu salário? ')
+      document.writeln(`Você fatura $${salario.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }).replace('.', ',')}`)
+    </script>
+  </ol>
+</body>
+
+</html>
