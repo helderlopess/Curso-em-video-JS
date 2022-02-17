@@ -9,11 +9,11 @@
 </head>
 <style>
   body {
-    color: rgb(0, 0, 0);
+    color: rgb(9, 3, 70);
     padding: 10% 25%;
     font: normal 18pt arial;
     text-align: center;
-    background-color: rgb(12, 12, 75);
+    background-color: rgb(1, 1, 10);
   }
 
   input {
@@ -22,13 +22,26 @@
   }
 
   .calc {
-    padding: 5%;
-    border: 1px solid rgb(212, 212, 212);
-    background-color: rgba(151, 141, 238, 0.7);
+    padding: 0 5%;
+    border: 1px solid rgb(116, 116, 116);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
   }
 
   div#res {
     margin-top: 20px;
+    padding: 5%;
+    background-color: rgb(209, 209, 209);
+  }
+
+  .btn {
+    width: 150px;
+    color: #fff;
+    font: bolder Arial;
+    background-color: rgb(39, 207, 39);
+    border-radius: 100px;
+    border: 0px;
+
   }
 </style>
 
@@ -37,7 +50,7 @@
     <h1>Somador de valores</h1>
     <input type="number" name="txtn1" id="txtn1"> +
     <input type="number" name="txtn2" id="txtn2">
-    <input type="button" value="somar" onclick="somar()">
+    <input type="button" class='btn' value="somar" onclick="somar()">
     <div id="res">Resultado</div>
   </div>
 

@@ -8,25 +8,29 @@
   <title>Document</title>
   <style>
     div#area {
-      font: bold;
-      color: rgb(255, 255, 255);
-      background-color: rgb(39, 207, 39);
       width: 200px;
       height: auto;
+      margin: 20% 40%;
       line-height: 200px;
       text-align: center;
+      font: bold;
+      color: rgb(255, 255, 255);
+      border-radius: 5px;
+      box-shadow: 10px 10px 10px rgb(212, 212, 212);
+      background-color: rgb(39, 207, 39);
     }
   </style>
 </head>
 
 <body>
-  <!-- removido <!--onclick="clicar()" onmouseenter="entrar()" onmouseout="saiu()"-->
+  <!-- removido onclick="clicar()" onmouseenter="entrar()" onmouseout="saiu()"-->
 
   <div id="area">
     Interaja
   </div>
   <script>
-    /*escutador de eventos do botão*/
+    /*escutador de eventos do botão. precisa declarar a variavel nessa parte do curso*/
+    var a = window.document.getElementById('area')
     a.addEventListener('click', clicar)
     a.addEventListener('mouseenter', entrar)
     a.addEventListener('mouseout', sair)
@@ -34,18 +38,16 @@
     /*eventos, funcões e interatividade (blocos)*/
     function clicar() {
       /*tudo qu está aqui dentro so sera executado ao ativar o evento*/
-      var a = window.document.getElementById('area')
       a.innerText = 'Clicou!'
       a.style.background = "red"
     }
 
     function entrar() {
-      var a = window.document.getElementById('area')
       a.innerText = 'Entrou'
+      a.style.font = 'italic black'
     }
 
     function sair() {
-      var a = window.document.getElementById('area')
       a.innerText = 'Saiu'
       a.style.background = 'rgb(39, 207, 39)'
     }
