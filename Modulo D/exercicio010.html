@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      color: rgb(9, 3, 70);
+      padding: 10% 25%;
+      font: normal 18pt arial;
+      text-align: center;
+      background: repeating-linear-gradient(45deg,
+          rgb(1, 1, 10),
+          rgb(1, 1, 10) 3px,
+          rgb(9, 1, 27) 3px,
+          rgba(9, 1, 27) 3px,
+          rgba(9, 1, 27) 10px);
+      /*background-color: rgb(1, 1, 10);*/
+    }
+
+    .calc {
+      padding: 0 10% 5%;
+      border: 1px solid rgb(116, 116, 116);
+      background-color: rgba(241, 220, 26);
+      border-radius: 5px;
+    }
+
+    input {
+      font: inherit;
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="calc">
+    <h1>Sistema de multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+  </div>
+  <script>
+    function calcular() {
+      var txtv = window.document.querySelector('input#txtvel')
+      var res = window.document.querySelector('div#res')
+      var vel = Number(txtv.value)
+      res.innerHTML = `<p>Sua velocidade ${vel}</p>`
+      res.innerHTML += "Dirija com responsabilidade. Use o Cinto"
+    }
+  </script>
+</body>
+
+</html>

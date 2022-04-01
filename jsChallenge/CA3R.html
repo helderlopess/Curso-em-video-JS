@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fechamento CA3R</title>
+  <style>
+    @font-face {
+      font-family: "DINOT-Regular";
+      src: url("//db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.eot");
+      src: url("//db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.woff") format("woff"), url("//db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.svg#DINOT-Regular") format("svg");
+    }
+
+    body {
+      font-family: Dinot Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      margin: 0;
+      background-color: #f8f8f8;
+
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      padding: .5%;
+      margin: 0;
+    }
+
+    h3,
+    h4 {
+      color: #51555d;
+    }
+
+    .main {
+      background-color: inherit;
+      align-self: center;
+    }
+
+    .content {
+      float: ;
+      display: flex;
+      position: relative;
+      width: 70%;
+      margin: 0px;
+      padding: 1% 3% 3% 5%;
+      border-radius: 10px;
+      background-color: #FFF;
+    }
+
+    .report {
+      float: left;
+      /*display: none;*/
+      position: relative;
+      margin-top: 12%;
+      width: 20%;
+      height: 200px;
+      padding: 10px;
+      text-align: justify;
+    }
+
+    .report>p::first-letter {
+      text-transform: capitalize;
+    }
+
+    .report:hover {
+      background-color: #e3262e;
+    }
+
+    .rb2form {
+      clear: both;
+      width: 100%;
+      background-color: #FFF;
+
+    }
+
+    .detail {}
+
+    textarea {
+      min-width: 60%;
+      height: 80px;
+      max-width: 90%;
+      border-radius: 5px;
+      border: 1px solid #000;
+    }
+
+    .assin {
+      min-height: 35px;
+      min-width: 60%;
+      border-radius: 5px;
+      border: 1px solid #000;
+      background-color: #fff;
+    }
+
+    .btn-gerar {
+      float: left;
+      margin: 0% 0% 0% 10%;
+      padding: 10px 30px;
+      font-weight: 500;
+      border-radius: 50px;
+      border: none;
+      background-color: #ffbc4a;
+    }
+
+    .btn-gerar:hover {
+      background-color: #f09905;
+    }
+
+    .btn-limpar {
+      float: right;
+      margin: 0% 20% 0% 0%;
+      color: #fff;
+      padding: 10px 30px;
+      font-weight: 500;
+      border-radius: 50px;
+      border: none;
+      background-color: #e3262e;
+    }
+
+    .btn-limpar:hover {
+      background-color: #a61d19;
+    }
+
+    input,
+    button {
+      padding: 5px;
+      background-color: #e4e4e4;
+      border: none;
+      border-radius: 50px;
+
+    }
+
+    input button:hover {
+      background-color: #888888;
+
+    }
+
+    .top {
+      position: relative;
+      color: #fff !important;
+      letter-spacing: 3px;
+      font-weight: bolder;
+      align-content: center;
+      margin: 0px 0 0;
+      padding: 1px 0 20px 0;
+      text-align: center;
+      background-color: #e3262e;
+    }
+
+    .buttonplace {
+      padding-left: 40%;
+      padding-right: 20%;
+
+    }
+
+    .footer {
+      color: #fff;
+      letter-spacing: 3px;
+      font-weight: bolder;
+      align-content: center;
+      margin: 50px 0 0 0;
+      padding: 20px 0 30px 0;
+      text-align: center;
+      background-color: #e3262e;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div style="display:none;" class="report" id="report" onclick="copiar(report)" onfocus="">
+      aqui sera gerado
+    </div>
+    <div class="top">
+      <h1>Gerador de texto para fechamento da CA3R-DV1</h1>
+      este sera o topo
+    </div>
+    <div class="content">
+      <form>
+        <label for="detail">Informe as ações realizadas</label><br>
+        <textarea class="detail" id="detail" name="detail" placeholder="Detalhe aqui o seu fechamento"></textarea>
+        <input type="button" class="btn-sec" id="btn-sec" onclick="copiar(detail)" value="copiar"><br>
+        <label for="assin">Sua assinatura</label><br>
+        <input type="tex" class="assin" id="assin" name="assin"
+          placeholder="HELDER LOPES / HELLEN CRISTINA / ANALISE DIVERGENCIA CM / BCC RPO">
+        <input type="button" class="btn-sec" id="btn-sec" onclick="copiar(assin)" value="copiar">
+        <div class="rb2form" style="border:1px solid #f8f8f8; padding: 0 10px;">
+          <h2>Informe abaixo o resultado do procedimento de contato com o cliente:</h2>
+          <h3>Fechamento para a CA3-RB2</h3>
+          <form>
+            <input type="radio" id="opc" name="ocpao" value="contato com sucesso">
+            <label for="cs">contato com sucesso</label><br>
+            <input type="radio" id="opc" name="ocpao" value="Contato sem sucesso">
+            <label for="ss">Contato sem sucesso</label><br>
+            <input type="radio" id="opc" name="ocpao" value="Contato telefônico sem sucesso - envio por email">
+            <label for="csee"></label>Contato telefônico sem sucesso - envio por email<br>
+            <input type="radio" id="opc" name="ocpao" value="Contato telefônico sem sucesso - envio por SMS">
+            <label for="cssms">Contato telefônico sem sucesso - envio por SMS</label><br>
+            <input type="radio" id="opc" name="ocpao" value="Comunicação de resolução via email">
+            <label for="cmail">Comunicação de resolução via email</label><br>
+            <input type="radio" id="opc" name="ocpao" value="Comunicação de resolução via SMS">
+            <label for="csms ">Comunicação de resolução via SMS</label><br>
+            <input type="radio" id="opc" name="ocpao" value="Sem necessidade de contato">
+            <label for="sn">Sem necessidade de contato</label><br>
+            <input type="radio" id="opc" name="ocpao" value="Erro de abertura">
+            <label for="err">Erro de abertura</label><br>
+            <p>Caso cliente entre em contato informar: </p>
+            <p>Insira um resumo do seu atendimento:</p>
+          </form>
+          <p>Ao gerar a ca3-rb2 no <strong>botão</strong> o fechamento descrito no campo acima será copiado também para
+            este.</p>
+        </div>
+      </form>
+    </div>
+    <div class="buttonplace">
+      <input type="button" class="btn-gerar" value="Gerar" onclick="gerar(c)">
+      <input type="button" class="btn-limpar" value="Limpar" onclick="limpar()">
+    </div>
+  </div>
+  <div class="footer">
+    Creditos - Helder Batista 2022 - BCC RPO
+  </div>
+  </div>
+
+  <script>
+    //var so funcionou declarando fora da function
+    var bt = ""
+    var ass = ""
+    var display = ""
+    var display = document.getElementsByClassName('report')
+    var c = document.querySelector('#opc')[0].value//document.querySelector('input[name="ocpao"]:checked')
+
+    function gerar(opcaobtn) {
+      let statusShow = 'block' //atribuindo a classe para que fique oculta o bloco de relatorio
+      esconder(statusShow)
+      bt = window.document.querySelector('textarea#detail').value //selecionando o valor digitado no input
+      ass = window.document.getElementById('assin').value
+      //opcaobtn = //document.querySelector("#opc").value
+        report.innerHTML = `<div>${bt} <br>  ${ass}</div><br>  ${opcaobtn}`
+
+      //exibicao da forma de contato realizado com o cliente e fechamento da OC
+      //for (var i = 0; i < 5; i++) {
+      //if (c == true) {
+
+      for (i = 0; i > 8; i++) {
+        let r = " "
+        if (opcaobtn != true) {
+          r = " "
+        }
+        else {
+          r = opcaobtn
+          report.innerHTML += `A opção selecionada${r}`
+        }
+        /*report.innerHTML += r
+
+        report.innerHTML += `<div>Informe abaixo o resultado do procedimento de contato com o cliente:<br>
+                            (${r}) Contato com sucesso<br>
+                            (${r}) Contato Sem Sucesso<br>
+                            (${r})Contato telefônico sem sucesso - envio por email<br>
+                            (${r}) Contato telefônico sem sucesso - envio por SMS<br>
+                            (${r}) Comunicação de resolução via email<br>
+                            (${r}) Comunicação de resolução via SMS<br>
+                            (${r}) Sem necessidade de contato<br>
+                            (${r}) Erro de abertura<br>
+                            Caso cliente entre em contato informar:${bt}
+                            Insira um resumo do seu atendimento:${bt}<br>
+                            ${ass}<\div>`
+      }*/
+      }
+    }
+
+    //funcao para copia do bloco de relatorio final gerado no campo oculto
+    function copiar(report) {
+      let reported = document.getElementById('report')
+      console.log('clicou')
+      /*reported[0].select()*/
+      navigator.clipboard.writeText(reported.innerText)
+      alert(`Copiado para area de transferencia: \n\n ${reported.innerText}`)
+      report.innerHTML += `<span style="display:inline-block; width:100%; margin:auto; padding:5px; text-align:center;">COPIADO!</span>`
+      setTimeout(() => {
+        report.innerHTML = reported.splice(1, 1)
+      }, 4000);
+    }
+
+    //limpa o bloco gerado e os valores digitados no fechamento, mantendo a assinatura
+    function limpar() {
+      let statusHide = 'none'
+      esconder(statusHide)
+      document.getElementById('detail').value = ""
+      bt.value = ""
+      bt = ""
+      ass = ""
+      report.innerHTML = ""
+    }
+
+    //mostra ou oculta o bloco de relatorio conforme o status dele oculta para o botao limpar/mostra p gerar
+    function esconder(showHide)/*era report*/ {
+      if (showHide == 'block')
+        display[0].style.display = 'block'
+      else if (display[0].style.display == 'block')
+        display[0].style.display = 'none'
+      else
+        alert('Não ha o que ocultar. 1º gere o relatório nos campos agira e click em GERAR')
+
+    }
+
+    /*function fecham(opc) {
+      innerHTML =
+  }*/
+
+    /*testar as opçoes do rb
+    
+    for i in fechamento
+      i=true*/
+  </script>
+</body>
+
+</html>

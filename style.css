@@ -1,0 +1,27 @@
+font-face {
+  font-family: "DINOT-Regular";
+  src: url("//db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.eot");
+  src: url("//db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.svg#DINOT-Regular")
+      format("svg");
+}
+body {
+  margin: 0;
+  font-family: Dinot Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.content {
+  margin: 5% 10%;
+  padding: 5% 10%;
+  color: #ffffff;
+  text-align: center;
+  font-size: 5em;
+  background-color: rgb(4, 4, 58);
+}
